@@ -43,4 +43,9 @@ try {
     Write-Host "3. File ton tai trong repo" -ForegroundColor Gray
     Write-Host ""
     pause
+
 }
+# THÊM DÒNG NÀY ĐỂ GIỮ CỬA SỔ
+Write-Host ""
+Write-Host "Nhan phim bat ky de dong cua so..." -ForegroundColor Yellow
+$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
