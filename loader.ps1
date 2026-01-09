@@ -1,5 +1,6 @@
 # loader.ps1
 $scriptUrl = "https://raw.githubusercontent.com/dvo2oo3/active-online/main/MAS_AIO.cmd"
+
 Write-Host ""
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host "  MAS Activation Script Loader" -ForegroundColor Green
@@ -8,6 +9,7 @@ Write-Host ""
 
 # Check admin
 $isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+
 if (-not $isAdmin) {
     Write-Host "[!] Can quyen Administrator!" -ForegroundColor Red
     Write-Host "[*] Dang khoi dong lai voi quyen Admin..." -ForegroundColor Yellow
@@ -17,6 +19,7 @@ if (-not $isAdmin) {
 }
 
 Write-Host "[*] Dang tai script tu GitHub..." -ForegroundColor Yellow
+
 try {
     $tempFile = "$env:TEMP\MAS_$(Get-Random).cmd"
     Invoke-WebRequest -Uri $scriptUrl -OutFile $tempFile -UseBasicParsing
@@ -38,9 +41,7 @@ try {
     Write-Host "1. Ket noi internet" -ForegroundColor Gray
     Write-Host "2. Link GitHub dung chua" -ForegroundColor Gray
     Write-Host "3. File ton tai trong repo" -ForegroundColor Gray
-}
+    Write-Host ""
+    pause
 
-# Pause cuoi cung
-Write-Host ""
-Write-Host "Nhan phim bat ky de dong cua so..." -ForegroundColor Yellow
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+}
