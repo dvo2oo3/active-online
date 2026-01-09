@@ -455,38 +455,38 @@ echo:
 echo:
 echo:       ______________________________________________________________
 echo:
-echo:                 Activation Methods:
+echo:                 Phuong Thuc Kich Hoat:
 echo:
 if defined _hwidgo (
-call :dk_color3 %_White% "             [1] " %_Green% "HWID" %_White% "                - Windows"
+call :dk_color3 %_White% "             [1] " %_Green% "HWID (Ma Phan Cung)" %_White% "           - Kich hoat Windows vinh vien"
 ) else (
-echo:             [1] HWID                - Windows
+echo:             [1] HWID (Ma Phan Cung)           - Kich hoat Windows vinh vien
 )
 if defined _ohookgo (
-call :dk_color3 %_White% "             [2] " %_Green% "Ohook" %_White% "               - Office"
+call :dk_color3 %_White% "             [2] " %_Green% "Ohook" %_White% "                        - Kich hoat Office vinh vien"
 ) else (
-echo:             [2] Ohook               - Office
+echo:             [2] Ohook                        - Kich hoat Office vinh vien
 )
 if defined _tsforgego (
-call :dk_color3 %_White% "             [3] " %_Green% "TSforge" %_White% "             - Windows / Office / ESU"
+call :dk_color3 %_White% "             [3] " %_Green% "TSforge" %_White% "                      - Kich hoat Windows/Office/ESU vinh vien"
 ) else (
-echo:             [3] TSforge             - Windows / Office / ESU
+echo:             [3] TSforge                      - Kich hoat Windows/Office/ESU vinh vien
 )
-echo:             [4] Online KMS          - Windows / Office
+echo:             [4] KMS Truc tuyen               - Kich hoat Windows/Office 180 ngay
 echo:             __________________________________________________ 
 echo:
-echo:             [5] Check Activation Status
-echo:             [6] Change Windows Edition
-echo:             [7] Change Office Edition
+echo:             [5] Kiem Tra Trang Thai Kich Hoat
+echo:             [6] Thay Doi Phien Ban Windows
+echo:             [7] Thay Doi Phien Ban Office
 echo:             __________________________________________________      
 echo:
-echo:             [8] Troubleshoot
-echo:             [E] Extras
-echo:             [H] Help
-echo:             [0] Exit
+echo:             [8] Khac Phuc Su Co
+echo:             [E] Cong Cu Bo Sung
+echo:             [H] Huong Dan Su Dung
+echo:             [0] Thoat Chuong Trinh
 echo:       ______________________________________________________________
 echo:
-call :dk_color2 %_White% "         " %_Green% "Choose a menu option using your keyboard [1,2,3...E,H,0] :"
+call :dk_color2 %_White% "         " %_Green% "Chon mot tuy chon bang ban phim [1,2,3...E,H,0] :"
 choice /C:12345678EH0 /N
 set _erl=%errorlevel%
 
@@ -19263,3 +19263,4 @@ if ($appIdsList.Count -gt 0) {
 ::========================================================================================================================================
 ::
 :: Leave empty line below
+
