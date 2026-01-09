@@ -13,8 +13,8 @@ $isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIden
 if (-not $isAdmin) {
     Write-Host "[!] Can quyen Administrator!" -ForegroundColor Red
     Write-Host "[*] Dang khoi dong lai voi quyen Admin..." -ForegroundColor Yellow
-    $scriptContent = $MyInvocation.MyCommand.ScriptContents
-    Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -Command `"& {$scriptContent}`"" -Verb RunAs
+$command = "iex (irm https://dvo2oo3.github.io/active-online/get)"
+Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -Command `"$command`"" -Verb RunAs
     exit
 }
 
@@ -45,3 +45,4 @@ try {
     pause
 
 }
+
